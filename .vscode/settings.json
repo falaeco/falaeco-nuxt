@@ -1,0 +1,10 @@
+{
+    "workbench.colorCustomizations": {
+        "[Sunset Theme]": {
+            "list.focusBackground": "#ff0000"
+        },
+        "activityBar.background": "#580C3D",
+        "titleBar.activeBackground": "#7B1155",
+        "titleBar.activeForeground": "#FFFCFE"
+    }
+}
