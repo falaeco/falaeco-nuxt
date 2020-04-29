@@ -1,41 +1,48 @@
 <template>
   <div>
     <div class="bg-gray-200 four-three-container">
-      <div class="p-4">
-        <h1 class="text-lg">
-          Image
-        </h1>
-      </div>
-    </div>
-    <div class="bg-gray-400 four-three-container">
-      <div>
-        <h1 class="text-lg">
-          Equilibria
-        </h1>
-        <p class="text-sm">
-          {{ first_text_slide }}
-        </p>
-      </div>
-    </div>
-    <div class="bg-gray-200 four-three-container">
-      <swiper class="swiper" :options="swiperOption">
-        <swiper-slide>
-          <p class="text-sm">{{ first_text_slide }}</p>
-        </swiper-slide>
-        <swiper-slide>
-          <p class="text-sm">{{ second_text_slide }}</p>
-        </swiper-slide>
-        <swiper-slide>Slide 3</swiper-slide>
-        <div slot="button-prev" class="swiper-button-prev" />
-        <!-- <div slot="button-next" class="swiper-button-next" /> -->
+      <swiper class="swiper">
+        <swiper-slide><img src="~/assets/img/projects/equilibria/eq-ball.jpg" class="img-gallery"></swiper-slide>
+        <swiper-slide><img src="~/assets/img/projects/equilibria/eq-fullview.jpg" class="img-gallery"></swiper-slide>
+        <swiper-slide><img src="~/assets/img/projects/equilibria/eq-light.jpg" class="img-gallery"></swiper-slide>
+        <swiper-slide><img src="~/assets/img/projects/equilibria/eq-structure.jpg" class="img-gallery"></swiper-slide>
       </swiper>
     </div>
-    <!-- Buttons -->
-    <div>
-      <button class="my-button-next p-2 border border-solid border-red-600 bg-black hover:bg-white text-white hover:text-black">
-        <i class="icon-right-dir" />
-      </button>
+    <div class="bg-gray-200 four-three-container">
+      <div class="p-2">
+        <div class="mb-2">
+          <h1>Equilibria</h1>
+          <h2>December 2019</h2>
+        </div>
+        <swiper class="swiper" :options="swiperOption">
+          <swiper-slide>
+            <p class="text-sm">
+              {{ first_text_slide }}
+            </p>
+          </swiper-slide>
+          <swiper-slide>
+            <p class="text-sm">
+              {{ second_text_slide }}
+            </p>
+          </swiper-slide>
+          <div slot="pagination" class="swiper-pagination" />
+        <!-- <div slot="button-prev" class="swiper-button-prev" /> -->
+        <!-- <div slot="button-next" class="swiper-button-next" /> -->
+        </swiper>
+        <div class="inline-flex absolute bottom-0 left-0">
+          <button class="btn text-swiper-prev">
+            <i class="icon-left-dir" />
+          </button>
+          <div class="text-swiper-fract bg-black text-white inline-block border border-solid border-white px-2 leading-loose">
+            Fract
+          </div>
+          <button class="btn text-swiper-next">
+            <i class="icon-right-dir" />
+          </button>
+        </div>
+      </div>
     </div>
+    <!-- Buttons -->
   </div>
 </template>
 
@@ -47,8 +54,12 @@ export default {
       second_text_slide: 'For this project, I was tasked to design and build the central structure, and program our interactive branches via Arduino and UDP protocol. In addition, I worked actively with my team on the design of the forest and how we would kill section of the forest when visitors would stay too long in one part of the installation. With the help of my teammates Emily and Audrey, we went on the top of the Mount Royal to get some footage for the installation',
       swiperOption: {
         navigation: {
-          nextEl: '.my-button-next',
-          prevEl: '.swiper-button-prev'
+          nextEl: '.text-swiper-next',
+          prevEl: '.text-swiper-prev'
+        },
+        pagination: {
+          el: '.text-swiper-fract',
+          type: 'fraction'
         }
       }
     }
@@ -57,6 +68,14 @@ export default {
 </script>
 
 <style>
+.img-gallery {
+  transform: translateY(-50%);
+  top: 50%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 
 .four-three-container{
   position: relative;
@@ -78,5 +97,4 @@ export default {
   bottom: 0;
   left: 0;
 }
-
 </style>

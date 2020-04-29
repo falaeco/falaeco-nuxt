@@ -4,7 +4,7 @@
     <div class="content border-dashed border-2">
       <nuxt />
     </div>
-    <main-nav class="main-nav"/>
+    <main-nav class="main-nav" />
   </div>
 </template>
 
@@ -19,6 +19,14 @@ export default {
 </script>
 
 <style>
+.btn {
+  @apply p-2 border border-solid border-gray-400 bg-black text-white;
+}
+
+.btn:hover {
+  @apply bg-white text-black;
+}
+
 .content{
   border-color: crimson;
   flex: 1 0 auto;
