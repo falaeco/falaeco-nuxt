@@ -42,7 +42,7 @@
         </div>
       </div>
     </div>
-    <!-- Buttons -->
+    <youtube :video-id="UwcoFXKnpOw" class="youtube-wrapper" />
   </div>
 </template>
 
@@ -96,5 +96,19 @@ export default {
   right: 0;
   bottom: 0;
   left: 0;
+}
+
+.youtube-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.youtube-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 </style>

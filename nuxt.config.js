@@ -29,7 +29,8 @@ export default {
   */
   plugins: [
     { src: '~/plugins/vue-awesome-swiper', mode: 'client' },
-    { src: '~/plugins/vue-youtube-embed', mode: 'client' }
+    { src: '~/plugins/vue-youtube-embed', mode: 'client' },
+    { src: '~/plugins/vue-observe-visibility', mode: 'client' }
   ],
   /*
   ** Nuxt.js dev-modules

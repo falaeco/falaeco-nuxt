@@ -1,7 +1,7 @@
 <template>
-  <div class="project-view-container">
+  <div class="project-view-container h-full flex flex-col">
     <project-nav />
-    <nuxt-child/>
+    <nuxt-child class="h-full" />
   </div>
 </template>
 

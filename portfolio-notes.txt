@@ -1,0 +1,65 @@
+structure:
+  container:
+    width: 100vw
+    min-height: auto
+    position: absolute
+    top: 90px?
+
+    container-row:
+      height: 100%
+
+      swiper-container:
+        height: inherit
+        
+        swiper-wrapper:
+          flex-direction: changes with the dimension of the port
+
+          swiper-slide:
+            width: auto
+            border-top: 0
+            border-right: 1px solid color for delimitation
+            width: auto
+            backface-visibility
+            might have position relative to absolute position nested content?
+          
+            content-div (cover):
+              width: hardcoded
+              height: 100%
+              
+              layout-wrap:
+                padding: add extra padding for the content
+            
+            static-video-wrap:
+              height: auto
+              width: auto
+            
+              video inside (c-video):
+                width: 100%;
+                height: 100%;
+                margin: auto;
+                overflow: hidden;
+                position: relative; (for absolutely positioning video controls)
+          
+          swiper-slide text:
+            like the swiper-slide above
+          
+            c-text:
+              padding: 2rem
+              height: 100%
+
+              c-text content:
+                width: 888px
+                columns: 435px;
+                column-fill: auto;
+                overflow: auto;
+
+          swiper-slide:
+            like above
+
+            c-gallery:
+              height: 100%
+              overflow: hidden
+              touch-action: pan-y
+              user-select: none
+
+            

@@ -12,9 +12,11 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
+    "lodash.debounce": "^4.0.8",
     "nuxt": "^2.0.0",
     "swiper": "^5.3.8",
     "vue-awesome-swiper": "^4.1.1",
+    "vue-observe-visibility": "^0.4.6",
     "vue-youtube-embed": "^2.2.2"
   },
   "devDependencies": {
