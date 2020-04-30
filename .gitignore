@@ -88,3 +88,6 @@ sw.*
 
 # Vim swap files
 *.swp
+
+# personal folder
+_me/

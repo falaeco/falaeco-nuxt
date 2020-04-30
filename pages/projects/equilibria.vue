@@ -25,29 +25,34 @@
               {{ second_text_slide }}
             </p>
           </swiper-slide>
-          <div slot="pagination" class="swiper-pagination" />
+        <!-- <div slot="pagination" class="swiper-pagination" /> -->
         <!-- <div slot="button-prev" class="swiper-button-prev" /> -->
         <!-- <div slot="button-next" class="swiper-button-next" /> -->
         </swiper>
         <div class="inline-flex absolute bottom-0 left-0">
-          <button class="btn text-swiper-prev">
+          <m-button class="text-swiper-prev">
             <i class="icon-left-dir" />
-          </button>
-          <div class="text-swiper-fract bg-black text-white inline-block border border-solid border-white px-2 leading-loose">
+          </m-button>
+          <div class="text-swiper-fract btn-colour-theme px-2 leading-loose">
             Fract
           </div>
-          <button class="btn text-swiper-next">
+          <m-button class="text-swiper-next">
             <i class="icon-right-dir" />
-          </button>
+          </m-button>
         </div>
       </div>
     </div>
-    <youtube :video-id="UwcoFXKnpOw" class="youtube-wrapper" />
+    <youtube video-id="UwcoFXKnpOw" class="youtube-wrapper" />
   </div>
 </template>
 
 <script>
+import MButton from '@/components/MButton'
+
 export default {
+  components: {
+    MButton
+  },
   data () {
     return {
       first_text_slide: 'Equilibria is a dialogue between an ecosystem in peril and the viewer. As visitors interact with an interactive sculpture, they are forced to confront the reality that their consumption ultimately leads to the system’s destruction. This realization prompts viewers to consider how best to conserve the experience for future visitors, who serve as a proxy for future generations. Equilibria invites viewers to think about their place within the global ecosystem and hopes to develop an awareness of their own finite reality',

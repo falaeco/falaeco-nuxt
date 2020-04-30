@@ -18,14 +18,7 @@ export default {
 }
 </script>
 
-<style>
-.btn {
-  @apply p-2 border border-solid border-gray-400 bg-black text-white;
-}
-
-.btn:hover {
-  @apply bg-white text-black;
-}
+<style scoped>
 
 .content{
   border-color: crimson;
