@@ -12,7 +12,7 @@ export default {
 
 <style lang="postcss">
 .btn-colour-theme{
-  @apply border border-solid border-gray-400 bg-gray-900 text-white;
+  @apply bg-mdarktwo text-mwhite;
 }
 
 .btn {
@@ -20,6 +20,6 @@ export default {
 }
 
 .btn:hover {
-  @apply bg-white text-black;
+  @apply bg-mwhite text-mdarktwo;
 }
 </style>

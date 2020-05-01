@@ -1,9 +1,11 @@
 <template>
-  <swiper ref="projectSwiper" v-observe-visibility="visibilityChanged" class="swiper c-swiper" :options="swiperOptions">
-    <!-- insert project swiper slides here -->
-    <slot />
-    <div slot="scrollbar" class="swiper-scrollbar" />
-  </swiper>
+  <client-only>
+    <swiper ref="projectSwiper" v-observe-visibility="visibilityChanged" class="swiper c-swiper" :options="swiperOptions">
+      <!-- insert project swiper slides here -->
+      <slot />
+      <div slot="scrollbar" class="swiper-scrollbar" />
+    </swiper>
+  </client-only>
 </template>
 
 <script>

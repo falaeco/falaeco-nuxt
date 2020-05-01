@@ -1,17 +1,23 @@
 <template>
   <div>
-    <swiper class="swiper" :options="imageSwiperOptions">
-      <!-- insert swiper image slides here --->
-      <slot />
-    </swiper>
-    <div class="gallery-navigation inline-flex absolute bottom-0 left-0">
-      <m-button class="image-swiper-next">
+    <client-only>
+      <swiper class="swiper image-swiper" :options="gallerySwiperOptions">
+        <swiper-slide v-for="(img, index) in imgSrc" :key="index" class="image-slide">
+          <img :src="require(`~/assets/img/${img}`)">
+        </swiper-slide>
+      </swiper>
+    </client-only>
+    <div class="gal-navigation inline-flex absolute bottom-0 left-0 z-10">
+      <m-button :class="id + 'image-swiper-prev gal-button gal-next'">
         <i class="icon-left-dir" />
       </m-button>
-      <div class="image-swiper-fract" />
-      <m-button class="image-swiper-prev">
+      <div :class="id + 'image-swiper-fract btn-colour-theme px-4 flex-none gal-fract font-acuminXcondensed'" />
+      <m-button :class="id + 'image-swiper-next gal-button'">
         <i class="icon-right-dir" />
       </m-button>
+      <div v-if="title" class="gallery-title">
+        <p>{{ title }}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -24,12 +30,32 @@ export default {
   components: {
     MButton
   },
+  props: {
+    id: {
+      type: String,
+      required: true
+    },
+    imgSrc: {
+      type: Array,
+      default () {
+        return ['https://picsum.photos/500', 'https://picsum.photos/200', 'https://picsum.photos/200']
+      }
+    },
+    title: {
+      type: String,
+      default: ''
+    }
+  },
   data () {
     return {
-      imageSwiperOptions: {
+      gallerySwiperOptions: {
+        pagination: {
+          el: '.' + this.id + 'image-swiper-fract',
+          type: 'fraction'
+        },
         navigation: {
-          nextEl: '.image-swiper-next',
-          prevEl: '.image-swiper-prev'
+          nextEl: '.' + this.id + 'image-swiper-next',
+          prevEl: '.' + this.id + 'image-swiper-prev'
         }
       }
     }
@@ -37,6 +63,17 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.gal-next, .gal-fract {
+  border-right: 1px solid #181616
+}
 
+.gal-navigation .swiper-pagination-fraction {
+  width: auto;
+}
+
+.gal-fract {
+  line-height: 45px;
+  letter-spacing: 0.2rem;
+}
 </style>

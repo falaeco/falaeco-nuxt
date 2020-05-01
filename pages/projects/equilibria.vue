@@ -2,10 +2,10 @@
   <div>
     <div class="bg-gray-200">
       <swiper class="swiper">
-        <swiper-slide><img src="~/assets/img/projects/equilibria/eq-ball.jpg"></swiper-slide>
-        <swiper-slide><img src="~/assets/img/projects/equilibria/eq-fullview.jpg"></swiper-slide>
-        <swiper-slide><img src="~/assets/img/projects/equilibria/eq-light.jpg"></swiper-slide>
-        <swiper-slide><img src="~/assets/img/projects/equilibria/eq-structure.jpg"></swiper-slide>
+        <swiper-slide><img src="~/assets/img/equilibria/eq-ball.jpg"></swiper-slide>
+        <swiper-slide><img src="~/assets/img/equilibria/eq-fullview.jpg"></swiper-slide>
+        <swiper-slide><img src="~/assets/img/equilibria/eq-light.jpg"></swiper-slide>
+        <swiper-slide><img src="~/assets/img/equilibria/eq-structure.jpg"></swiper-slide>
       </swiper>
     </div>
     <div class="bg-gray-200">
