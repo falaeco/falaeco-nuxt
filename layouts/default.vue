@@ -1,7 +1,7 @@
 <template>
-  <div class="flex flex-col h-screen">
+  <div class="h-screen">
     <logo-header />
-    <div class="content border-dashed border-2">
+    <div class="content">
       <nuxt />
     </div>
     <main-nav class="main-nav" />
@@ -19,13 +19,10 @@ export default {
 </script>
 
 <style scoped>
-
-.content{
-  border-color: crimson;
-  flex: 1 0 auto;
-}
-
-.main-nav{
-  flex-shrink: 0;
+/** the content needs to be height - topBar - bottomBar */
+@media screen and (min-width: 768px){
+  .content {
+    height: calc(100% - 80px);
+  }
 }
 </style>

@@ -1,16 +1,7 @@
 <template>
-  <swiper ref="mySwiper" v-observe-visibility="visibilityChanged" class="swiper" :options="swiperOptions">
-    <swiper-slide class="bg-gray-200">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure expedita aspernatur nulla sunt provident. Corrupti fugiat atque sit inventore dignissimos nesciunt aperiam? Facilis, quidem. Minima, voluptatibus quis? Odit, impedit reprehenderit.</p>
-    </swiper-slide>
-    <swiper-slide class="bg-gray-400">
-      Slide 2
-    </swiper-slide>
-    <swiper-slide class="bg-gray-200">
-      Slide 3
-    </swiper-slide>
-    <div slot="scrollbar" class="swiper-scrollbar" />
-  </swiper>
+  <div>
+    <p>Machine to hang with birds</p>
+  </div>
 </template>
 
 <script>

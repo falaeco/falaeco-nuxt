@@ -1,7 +1,9 @@
 <template>
-  <div class="project-view-container h-full flex flex-col">
-    <project-nav />
-    <nuxt-child class="h-full" />
+  <div class="p-container border border-solid border-blue-500 flex flex-col md:flex-row">
+    <project-nav class="py-4 bg-orange-400 flex flex-row justify-around md:flex-col" />
+    <div class="h-full">
+      <nuxt-child />
+    </div>
   </div>
 </template>
 
@@ -16,7 +18,7 @@ export default {
 </script>
 
 <style scoped>
-.project-view-container{
-  border: 1px solid brown;
+.p-container {
+  height: 100%;
 }
 </style>

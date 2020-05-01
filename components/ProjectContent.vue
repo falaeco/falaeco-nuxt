@@ -19,6 +19,12 @@ export default {
           el: '.swiper-scrollbar'
         },
         mousewheel: true,
+        allowTouchMove: false,
+        breakpoints: {
+          768: {
+            allowTouchMove: true
+          }
+        },
         on: {
           resize: () => {
             this.updateSwiperDirection()
@@ -34,7 +40,7 @@ export default {
     },
     updateSwiperDirection () {
       this.$refs.projectSwiper.$swiper.changeDirection(
-        window.innerWidth <= 640 ? 'vertical' : 'horizontal'
+        window.innerWidth <= 768 ? 'vertical' : 'horizontal'
       )
     }
   }
@@ -46,7 +52,19 @@ export default {
 </style>
 
 <style>
+.c-swiper{
+  height: inherit;
+}
+
 .c-swiper .c-slide {
   width: auto;
+  height: auto;
+}
+
+@media (min-width: 768px){
+  /** TODO: add space for the scroll bar maybe */
+  .c-swiper .c-slide {
+    height: 100%;
+  }
 }
 </style>

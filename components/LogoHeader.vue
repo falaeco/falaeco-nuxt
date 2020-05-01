@@ -1,6 +1,8 @@
 <template>
-  <div class="p-8">
-    <h1 class="text-lg font-bold">FALAECO</h1>
+  <div class="p-8 bg-yellow-400">
+    <h1 class="text-lg font-bold">
+      FALAECO
+    </h1>
   </div>
 </template>
 

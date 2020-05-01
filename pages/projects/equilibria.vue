@@ -1,14 +1,14 @@
 <template>
   <div>
-    <div class="bg-gray-200 four-three-container">
+    <div class="bg-gray-200">
       <swiper class="swiper">
-        <swiper-slide><img src="~/assets/img/projects/equilibria/eq-ball.jpg" class="img-gallery"></swiper-slide>
-        <swiper-slide><img src="~/assets/img/projects/equilibria/eq-fullview.jpg" class="img-gallery"></swiper-slide>
-        <swiper-slide><img src="~/assets/img/projects/equilibria/eq-light.jpg" class="img-gallery"></swiper-slide>
-        <swiper-slide><img src="~/assets/img/projects/equilibria/eq-structure.jpg" class="img-gallery"></swiper-slide>
+        <swiper-slide><img src="~/assets/img/projects/equilibria/eq-ball.jpg"></swiper-slide>
+        <swiper-slide><img src="~/assets/img/projects/equilibria/eq-fullview.jpg"></swiper-slide>
+        <swiper-slide><img src="~/assets/img/projects/equilibria/eq-light.jpg"></swiper-slide>
+        <swiper-slide><img src="~/assets/img/projects/equilibria/eq-structure.jpg"></swiper-slide>
       </swiper>
     </div>
-    <div class="bg-gray-200 four-three-container">
+    <div class="bg-gray-200">
       <div class="p-2">
         <div class="mb-2">
           <h1>Equilibria</h1>

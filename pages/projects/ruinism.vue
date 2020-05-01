@@ -1,7 +1,7 @@
 <template>
   <project-content-slider>
     <swiper-slide class="c-slide">
-      <div class="max-w-xs text-container">
+      <div class="text-container md:max-w-sm">
         <h1 class="title">
           Ruinism
         </h1>
@@ -24,8 +24,8 @@
       </div>
     </swiper-slide>
     <swiper-slide class="c-slide bg-gray-400">
-      <div>
-        <img src="~/assets/img/projects/ruinism/ruin-front.png">
+      <div class="h-auto md:h-full">
+        <img src="~/assets/img/projects/ruinism/ruin-front.png" class="h-auto">
       </div>
     </swiper-slide>
     <swiper-slide class="c-slide bg-gray-200">
