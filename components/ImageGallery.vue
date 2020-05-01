@@ -49,6 +49,7 @@ export default {
   data () {
     return {
       gallerySwiperOptions: {
+        slidesPerView: 1,
         pagination: {
           el: '.' + this.id + 'image-swiper-fract',
           type: 'fraction'
@@ -56,6 +57,14 @@ export default {
         navigation: {
           nextEl: '.' + this.id + 'image-swiper-next',
           prevEl: '.' + this.id + 'image-swiper-prev'
+        },
+        on: {
+          init: () => {
+            console.log('I am initialized')
+            setTimeout(() => {
+              window.dispatchEvent(new Event('resize'))
+            }, 200)
+          }
         }
       }
     }
@@ -64,6 +73,10 @@ export default {
 </script>
 
 <style scoped>
+.image-swiper{
+  width: 100%;
+}
+
 .gal-next, .gal-fract {
   border-right: 1px solid #181616
 }

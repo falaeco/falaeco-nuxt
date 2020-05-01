@@ -63,10 +63,18 @@ export default {
   height: auto;
 }
 
+.c-swiper .swiper-scrollbar {
+  visibility: hidden;
+}
+
 @media (min-width: 768px){
   /** TODO: add space for the scroll bar maybe */
   .c-swiper .c-slide {
     height: 100%;
+  }
+
+  .c-swiper .swiper-scrollbar{
+    visibility: visible;
   }
 }
 </style>

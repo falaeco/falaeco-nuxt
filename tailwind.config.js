@@ -25,5 +25,14 @@ module.exports = {
   variants: {},
   plugins: [
     require('tailwindcss-touch')()
-  ]
+  ],
+  purge: {
+    enabled: process.env.NODE_ENV === 'production',
+    content: [
+      'components/**/*.vue',
+      'layouts/**/*.vue',
+      'pages/**/*.vue',
+      'nuxt.config.js'
+    ]
+  }
 }

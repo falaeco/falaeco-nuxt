@@ -1,6 +1,6 @@
 <template>
-  <div class="p-8 bg-yellow-400">
-    <h1 class="text-lg font-bold">
+  <div class="p-5 bg-mdarkone text-center bg-opacity-25">
+    <h1 class="text-lg text-mwhite font-bold">
       FALAECO
     </h1>
   </div>

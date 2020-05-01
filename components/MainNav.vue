@@ -1,5 +1,5 @@
 <template>
-  <nav class="text-center p-8">
+  <nav class="text-center p-8 nav-link uppercase">
     <nuxt-link to="/projects">
       Projects
     </nuxt-link>

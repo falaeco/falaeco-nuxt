@@ -31,36 +31,9 @@
       </div>
     </swiper-slide>
     <swiper-slide class="c-slide bg-gray-400">
-      <div class="concept">
-        <swiper class="swiper image-swiper" :options="gallerySwiperOptions">
-          <swiper-slide class="image-slide">
-            <img src="~/assets/img/ruinism/ruin-concept1.jpg">
-          </swiper-slide>
-          <swiper-slide class="image-slide">
-            <img src="~/assets/img/ruinism/ruin-concept2.jpg">
-          </swiper-slide>
-          <swiper-slide class="image-slide">
-            <img src="~/assets/img/ruinism/ruin-concept3.jpg">
-          </swiper-slide>
-        </swiper>
-        <div class="inline-flex absolute bottom-0 left-0 z-10">
-          <m-button class="image-swiper-prev">
-            <i class="icon-left-dir" />
-          </m-button>
-          <div class="image-swiper-fract btn-colour-theme px-4 flex-none font-acuminXcondensed tracking-wide" style="line-height: 45px">
-            Fract
-          </div>
-          <m-button class="image-swiper-next">
-            <i class="icon-right-dir" />
-          </m-button>
-          <div class="font-acuminXcondensed">
-            <p>First Iteration: Early Sketches of concepts</p>
-          </div>
-        </div>
-      </div>
+      <image-gallery id="concepts" :img-src="gallery.urlzero" />
     </swiper-slide>
     <swiper-slide>
-      <!--dc-->
       <image-gallery id="explo" :img-src="gallery.urltwo" />
     </swiper-slide>
     <swiper-slide>
@@ -71,15 +44,19 @@
 
 <script>
 import ProjectContentSlider from '@/components/ProjectContent'
-import MButton from '@/components/MButton'
 import ImageGallery from '@/components/ImageGallery'
 export default {
   components: {
-    ProjectContentSlider, MButton, ImageGallery
+    ProjectContentSlider, ImageGallery
   },
   data () {
     return {
       gallery: {
+        urlzero: [
+          'ruinism/ruin-concept1.jpg',
+          'ruinism/ruin-concept2.jpg',
+          'ruinism/ruin-concept3.jpg'
+        ],
         urltwo: [
           'ruinism/ruin-explo1.png',
           'ruinism/ruin-explo2.png',
@@ -107,35 +84,6 @@ export default {
 </script>
 
 <style scoped>
-.image-swiper-fract.swiper-pagination-fraction{
-  width: auto;
-}
-
-.image-slide img{
-  width: auto;
-}
-
-.title{
-  font-family: acumin-pro-condensed, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  letter-spacing: 0.06rem;
-  color: #f7f3f3;
-  line-height: 1;
-}
-.subtitle{
-  font-family: acumin-pro-condensed, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #c4c2c2;
-  letter-spacing: 0.05rem;
-}
-.text{
-  font-family: acumin-pro, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #dcdada
-}
 
 .text-container{
   padding: 1rem;

@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen">
+  <div class="h-screen bg-mdarkone">
     <logo-header />
     <div class="content">
       <nuxt />

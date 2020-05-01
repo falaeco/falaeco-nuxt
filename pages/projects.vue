@@ -1,6 +1,6 @@
 <template>
   <div class="p-container border border-solid border-blue-500 flex flex-col md:flex-row">
-    <project-nav class="py-4 bg-orange-400 flex flex-row justify-around md:flex-col" />
+    <project-nav />
     <div class="h-full">
       <nuxt-child />
     </div>
